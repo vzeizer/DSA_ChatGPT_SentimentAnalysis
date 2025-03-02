@@ -1,0 +1,6 @@
+# new ideias to further develop the data analysis
+
+1. number of tweets grouped by sentiment
+2. analyse in terms of minute, hour, day -> inspect the date attribute
+3. analyse the 'QuoteCount' attribute more carefully
+4. by having these new engineered features, get more insightful plots!
