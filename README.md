@@ -116,148 +116,215 @@ Notes: Count of hashtags. Redundant if hashtag is available, but convenient. Red
 
 ## Results
 
-### 
+### Violin plots for Numeric columns
+
+The following figure addresses the violin plots for the numeric columns present in this dataset.
 
 ![logo](images/1_violinplots.png)
 
 
-### 
+### Feature's distribution
+
+The next figure shows the feature's distribution for the attributes present in this dataset.
 
 ![logo](images/2_dists.png)
 
-### 
+### Top 20 Users By Tweet Count
+
+The next image shows the top 20 users sorted by the total number of tweet counts.
 
 ![logo](images/3_top20users.png)
 
-### 
+### Media Type Distribution
+
+The next image addresses the the media type distribution for the instances in this dataset.
 
 ![logo](images/4_mediatype_dist.png)
 
-### 
+### Languages present in the dataset
+
+The following figure shows all the languages that were recognized by inspecting the whole dataset, along with its respective number of instances.
 
 ![logo](images/5_languages_dataset.png)
 
-### 
+### Top 10 languages present in the dataset
+
+The next figure addresses the top 10 languages present in this dataset, which are *English, Japanish, Spanish, French, German, Portuguese, Italian*, and so on.
 
 ![logo](images/6_top10languages.png)
 
-### 
+### Boxplot of Retweet Count
+
+The next figure shows a boxplot of the retweet counts for the instances in this dataset, clearly showing that the most values lie around 0, and there are severe outliers.
 
 ![logo](images/7_retweet_boxplot.png)
 
-### 
+### Reply Boxplot
+
+The following addresses the total number of replies for a given twitter, which lay mainly around 0, but can contain several outliers, distorting its distribution.
 
 ![logo](images/8_reply_boxplot.png)
 
-### 
+### Top 10 Reply Counts
+
+The next figure shows the average top 10 reply totalled that were observed in this dataset
 
 ![logo](images/9_top10_replycounts.png)
 
-### 
+### Like Count Distribution
+
+The following figure depicts a boxplot of the Like count attribute, suggesting a large number of outliers.
 
 ![logo](images/10_like_boxplot.png)
 
-### 
+### Quote Count Boxplot
+
+The following figure shows the Quote count featuer in a boxplot, ...
+
 
 ![logo](images/11_quotecount_box.png)
 
-### 
+### Top 10 hash-tags
+
+The following figure shows the top 10 hash-tags present in this dataset, and clearly, besides an empty hashtag, "ChatGPT" and "AI" are the most common hashtags
 
 ![logo](images/12_top10HashTags.png)
 
-### 
+### Boxplot of hashtag counts
+
+The next figure addressesa boxplot of the hashtag counts in this dataset,...
+
 
 ![logo](images/13_hashtag_box.png)
 
-### 
+### Top 20 sources
+
+The next figure shows the top 20 sources, from which the Twitters have been sent.
+
 
 ![logo](images/14_top20sources.png)
 
-### 
+### Like Count Boxplot for the top 5 sources
+
+The following figure shows the like count boxplots as a function of the top 5 sources, from which one can notice that...
 
 ![logo](images/15_likecount_top5sources.png)
 
-### 
+### Text length distribution
+
+The following figure shows the text length distribution for the sentences present in this dataset.
 
 ![logo](images/16_distlengthtext.png)
 
-### 
+### Text length distribution by source
+
+The next figure addresses the text length distribution discriminated by the top 5 sources,...
 
 ![logo](images/17_distlengthtext_top5sources.png)
 
-### 
+### Boxen plot of the text length
+
+The next figure shows a boxen plot of the text length distribution of the sentences present in this dataset.
 
 ![logo](images/18_textlen_boxenplot.png)
 
-### 
+### Boxen plot of the text length by source
+
+The following figure shows a boxen plot of the text length discriminated by the source of Twitter posting.
 
 ![logo](images/19_textlen_boxen_source.png)
 
-### 
+### Distribution of the number of words
+
+The next figure shows the number of words distribution in the whole dataset instances.
 
 ![logo](images/20_numberwords_dist.png)
 
-### 
+### Unique words
+
+The following figure shows a distribution of the unique words for each instance present in this dataset in terms of the sources of Twitter posting.
 
 ![logo](images/21_uniquewords_dist.png)
 
-### 
+### Boxen plot of Word counts
+
+The following figure presents a boxen plot of the word counts of the instances present in this dataset.
 
 ![logo](images/22_wordcount_boxen.png)
 
-### 
+### Boxen plot of Word counts by source
+
+The following figure shows a boxen plot of the word counts of each instance in this dataset, segmented by source of Twitter posting.
 
 ![logo](images/23_wordcount_boxen_source.png)
 
-### 
+### Violin plot of the top 5 sources
+
+The following figure shows violin plots of the top 5 sources of Twitter Posting for 5 featues: *ReplyCount, RetweetCount, LikeCount, QuoteCount, and hashtag_counts"...
 
 ![logo](images/24_violin_top5sources.png)
 
-### 
+### Boxen Plot of the top 5 sources
+
+The following figure shows boxen plots of the top 5 sources of Twitter Posting for 5 featues: *ReplyCount, RetweetCount, LikeCount, QuoteCount, and hashtag_counts"...
+
 
 ![logo](images/25_boxenplot_top5sources.png)
 
-### 
+### Descriptive statistics
+
+Descriptive statistics for the whole dataset is shown in the next figure.
 
 ![logo](images/26_stats_all.png)
 
-### 
+### Descriptive statistics for Twittes in English
+
+Descriptive statistics for Twittes in Portuguese for the whole dataset is shown in the next figure.
+
 
 ![logo](images/27_stats_en.png)
 
-### 
+### Descriptive statistics for Twittes in Portuguese
+
+Descriptive statistics for Twittes in Portuguese for the whole dataset is shown in the next figure.
 
 ![logo](images/28_stats_pt.png)
 
-### 
+### Distribution of sentiments
+
+The next figure shows the sentiment distribution present in this dataset.
 
 ![logo](images/29_sentiment_dist.png)
 
-### 
+### Distribution of subjectivity
+
+It is shown in the next figure the distribution of subjectivity in this dataset instances.
 
 ![logo](images/30_subjectivity_dist.png)
 
-### 
+### Objective vs Subjective
 
 ![logo](images/31_objective_subjective.png)
 
-### 
+### Distribution of polarity
 
 ![logo](images/32_polarity_dist.png)
 
-### 
+### Polarity vs subjectivity
+
+The following figure addresses the polarity of the sentences discriminated by its subjectivity.
 
 ![logo](images/33_polarity_sub.png)
 
-### 
+### Top 10 most common words
 
 ![logo](images/34_top10mostcommonwords.png)
 
-### 
+### Top 20 bigrams
 
 ![logo](images/35_top20bigrams.png)
 
-### 
+### Top 20 trigrams
 
 ![logo](images/36_top20trigrams.png)
 
