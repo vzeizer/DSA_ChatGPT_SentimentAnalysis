@@ -164,7 +164,7 @@ The next figure addresses the top 10 languages present in this dataset, which ar
 
 ### Boxplot of Retweet Count
 
-The next figure shows a boxplot of the retweet counts for the instances in this dataset, clearly showing that its most values lay around 0 and can reach up to more than 8 (remember this features was log-transformed). Therefore, there might be severe outliers in this feature.
+The next figure shows a boxplot of the retweet counts for the instances in this dataset, clearly showing that its most values lay around 0 and can reach up to more than 8 (remember this feature was log-transformed). Therefore, there might be severe outliers in this feature.
 
 ![logo](images/7_retweet_boxplot.png)
 
@@ -188,7 +188,7 @@ The following figure depicts a boxplot of the Like count attribute, suggesting a
 
 ### Quote Count Boxplot
 
-The following figure shows the Quote count feature in a boxplot, since this is a log-transformed scale, it is noticeable that the Quote count can vary from 0-10^8!! There are a plenty of outliers
+The following figure shows the Quote count feature in a boxplot, since this is a log-transformed scale, it is noticeable that the Quote count can vary from 0-10<sup>8</sup>!! There are a plenty of outliers
 
 
 ![logo](images/11_quotecount_box.png)
@@ -201,7 +201,7 @@ The following figure shows the top 10 hashtags present in this dataset, and clea
 
 ### Boxplot of hashtag counts
 
-The next figure addressesa boxplot of the hashtag counts in this dataset,...
+The next figure addressesa boxplot of the hashtag counts in this dataset, evidencing that there are several outliers
 
 
 ![logo](images/13_hashtag_box.png)
@@ -227,7 +227,7 @@ The following figure shows the text length distribution for the sentences presen
 
 ### Text length distribution by source
 
-The next figure addresses the text length distribution discriminated by the top 5 sources, from which one can notice that the overall distribution seems to be a sum of 5 similar distributions
+The next figure addresses the text length distribution discriminated by the top 5 sources, from which one can notice that the overall distribution seems to be a sum of 5 similar distributions.
 
 ![logo](images/17_distlengthtext_top5sources.png)
 
@@ -239,7 +239,7 @@ The next figure shows a boxen plot of the text length distribution of the senten
 
 ### Boxen plot of the text length by source
 
-The following figure shows a boxen plot of the text length discriminated by the source of Twitter posting, from which one can clearly notice that...
+The following figure shows a boxen plot of the text length discriminated by the source of Twitter posting, from which one can clearly notice that the distributions are indeed similar for Twittes posted in IPhone, Android, and Web Apps.
 
 
 ![logo](images/19_textlen_boxen_source.png)
