@@ -360,12 +360,108 @@ The next figure shows the top 20 trigrams obtained by analyzing this dataset. Th
 
 ## Summary of Key Findings
 
+1. Data Preprocessing and Feature Engineering:
 
+Numeric features (LikeCount, QuoteCount, ReplyCount, RetweetCount) were log-transformed to address scaling issues and potential outliers.
+
+2. Data Distribution and Outliers:
+
+Violin and box plots revealed significant outliers in numeric features.
+Distributions of numeric features were skewed, indicating non-normal distributions.
+Retweet, reply, like, and quote counts showed a concentration around 0 with many high outliers.
+Hashtag counts also showed many outliers.
+Text length and word counts showed bimodal distributions.
+
+3. Content and Language Analysis:
+
+English was the predominant language, followed by Japanese, Spanish, and other languages.
+"ChatGPT" and "AI" were the most common hashtags.
+The most common words are "chatgpt", "ai", and "it".
+The most common bigrams are "chat gpt", "use chatgpt", and "using chatgpt".
+The most common trigrams are "chatgpt creator openai", "wharton mba exam", and "medical licensing exam".
+
+4. User and Source Analysis:
+
+The top 20 users by tweet count were identified.
+The most common tweet sources were web apps, iPhones, and Android devices.
+Like count distributions varied across the top 5 sources (web, iPhone, Android, etc.).
+Text length and word count distributions were similar across the top sources.
+
+5. Sentiment and Subjectivity Analysis:
+
+Neutral sentiments were most frequent, with a right-skewed distribution towards positive sentiments.
+Objective sentences were more prevalent than subjective ones.
+Positive polarity was predominant, followed by neutral and then negative.
+Neutral sentiments were highly objective, while positive and negative sentiments showed more subjectivity.
+
+6. Key Observations:
+
+The dataset contains a significant amount of social media data related to "ChatGPT" and "AI".
+Outliers are a significant issue in many numeric features.
+English is the dominant language.
+Neutral and positive sentiments are more common than negative sentiments.
+Most sentences are objective.
 
 
 ## Real-world Scenario Usages
 
+1. Social Media Monitoring and Trend Analysis:
 
+Scenario: A company wants to understand public perception of their AI product (related to ChatGPT) on Twitter.
+Usage:
+Track the prevalence of "ChatGPT" and "AI" hashtags to gauge topic popularity.
+Monitor sentiment distribution to assess positive, negative, or neutral reactions.
+Analyze top bigrams and trigrams to identify common phrases and associated topics (e.g., "use ChatGPT," "ChatGPT creator OpenAI").
+Identify top users and sources to understand who is driving the conversation.
+Track languages used to understand the global reach of the product.
+Monitor the evolution of the sentiment of the tweets over time, in order to rapidly react to any sudden shift in public opinion.
+
+2. Content Moderation and Spam Detection:
+
+Scenario: A social media platform needs to filter spam and identify potentially harmful content related to AI.
+Usage:
+Identify accounts with unusually high tweet counts or reply counts (potential bots or spam).
+Detect outliers in like, retweet, and quote counts, which might indicate manipulated engagement.
+Analyze text length and word count distributions to identify repetitive or automated content.
+Filter tweets with a very high rate of hashtags, as this can be a sign of spam.
+Use the sentiment analysis to detect highly negative or toxic tweets.
+
+3. Marketing and Customer Insights:
+
+Scenario: A marketing team wants to tailor their campaigns to specific user segments based on their social media behavior.
+Usage:
+Segment users based on their preferred tweet sources (iPhone, Android, web) and tailor content accordingly.
+Analyze language distribution to create multilingual campaigns.
+Identify popular hashtags and keywords to optimize content for search and social media visibility.
+Use the sentiment analysis to understand what kind of marketing messages resonates better with the audience.
+Understand the most used words, bigrams and trigrams to adapt the marketing language.
+
+4. Product Development and Feature Prioritization:
+
+Scenario: An AI product developer wants to understand user feedback and prioritize feature enhancements.
+Usage:
+Analyze user sentiment and subjectivity to identify pain points and areas for improvement.
+Identify common words and phrases used by users to understand their needs and preferences.
+Track reply and quote counts to gauge user engagement and interest in specific features.
+Analyze the media type distribution to understand what kind of media is more engaged by the users.
+
+5. Research and Academic Studies:
+
+Scenario: Researchers want to study the social impact of AI technologies like ChatGPT.
+Usage:
+Analyze language distribution to understand the global spread of AI conversations.
+Study sentiment and polarity patterns to assess public perception and ethical concerns.
+Analyze hashtag usage to identify emerging trends and subtopics.
+Study the evolution of the vocabulary used in the tweets, to understand how the conversations around AI are changing.
+
+6. Crisis Management:
+
+Scenario: A company faces a public relations crisis related to their AI product.
+Usage:
+Monitor sentiment and polarity in real-time to track the severity of the crisis.
+Identify key influencers and sources spreading negative information.
+Analyze common words and phrases to understand the root cause of the crisis.
+Use the language detection to understand in what countries the crisis is more intense.
 
 
 ## Acknowledgements
