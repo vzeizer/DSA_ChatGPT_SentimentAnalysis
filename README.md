@@ -116,9 +116,18 @@ Notes: Count of hashtags. Redundant if hashtag is available, but convenient. Red
 
 ## Results
 
+The following feature engineering procedure was performed in some numeric variables in order to deal with attributes in very different scales:
+
+- df['LikeCount'] = np.log1p(df['LikeCount']),
+- df['QuoteCount'] = np.log1p(df['QuoteCount']),
+- df['ReplyCount'] = np.log1p(df['ReplyCount']),
+- df['RetweetCount'] = np.log1p(df['RetweetCount']),
+
+i.e., **the features have been log-transformed**.
+
 ### Violin plots for Numeric columns
 
-The following figure addresses the violin plots for the numeric columns present in this dataset.
+The following figure addresses the violin plots for the numeric columns present in this dataset, showing the shape of the distribution for each numeric feature and evidencing that in this dataset there are a lot of outliers.
 
 ![logo](images/1_violinplots.png)
 
@@ -143,7 +152,7 @@ The next image addresses the the media type distribution for the instances in th
 
 ### Languages present in the dataset
 
-The following figure shows all the languages that were recognized by inspecting the whole dataset, along with its respective number of instances.
+The following figure shows all the languages that were recognized by inspecting the whole dataset, along with its respective number of instances. It is evident that the English language is by far the predominant language.
 
 ![logo](images/5_languages_dataset.png)
 
@@ -155,13 +164,13 @@ The next figure addresses the top 10 languages present in this dataset, which ar
 
 ### Boxplot of Retweet Count
 
-The next figure shows a boxplot of the retweet counts for the instances in this dataset, clearly showing that the most values lie around 0, and there are severe outliers.
+The next figure shows a boxplot of the retweet counts for the instances in this dataset, clearly showing that its most values lay around 0 and can reach up to more than 8 (remember this features was log-transformed). Therefore, there might be severe outliers in this feature.
 
 ![logo](images/7_retweet_boxplot.png)
 
 ### Reply Boxplot
 
-The following addresses the total number of replies for a given twitter, which lay mainly around 0, but can contain several outliers, distorting its distribution.
+The following addresses the total number of replies for a given twitter, which lay mainly around 0, but can contain several outliers (the log-transformation was previously applied), distorting its distribution.
 
 ![logo](images/8_reply_boxplot.png)
 
@@ -173,20 +182,20 @@ The next figure shows the average top 10 reply totalled that were observed in th
 
 ### Like Count Distribution
 
-The following figure depicts a boxplot of the Like count attribute, suggesting a large number of outliers.
+The following figure depicts a boxplot of the Like count attribute, suggesting a large number of outliers, since this scale is log-transformed.
 
 ![logo](images/10_like_boxplot.png)
 
 ### Quote Count Boxplot
 
-The following figure shows the Quote count featuer in a boxplot, ...
+The following figure shows the Quote count feature in a boxplot, since this is a log-transformed scale, it is noticeable that the Quote count can vary from 0-10^8!! There are a plenty of outliers
 
 
 ![logo](images/11_quotecount_box.png)
 
-### Top 10 hash-tags
+### Top 10 hashtags
 
-The following figure shows the top 10 hash-tags present in this dataset, and clearly, besides an empty hashtag, "ChatGPT" and "AI" are the most common hashtags
+The following figure shows the top 10 hashtags present in this dataset, and clearly, besides an empty hashtag, "ChatGPT" and "AI" are the most common hashtags.
 
 ![logo](images/12_top10HashTags.png)
 
@@ -199,26 +208,26 @@ The next figure addressesa boxplot of the hashtag counts in this dataset,...
 
 ### Top 20 sources
 
-The next figure shows the top 20 sources, from which the Twitters have been sent.
+The next figure shows the top 20 sources, from which the Twitters have been sent. The top 3 sources, respectively, are: Twittes from Web Apps, Twittes from IPhone, Twitters from Android.
 
 
 ![logo](images/14_top20sources.png)
 
 ### Like Count Boxplot for the top 5 sources
 
-The following figure shows the like count boxplots as a function of the top 5 sources, from which one can notice that...
+The following figure shows the like count boxplots as a function of the top 5 sources, from which one can notice that there are several outliers regarding the feature *LikeCount*, and Twittes in Android seems to have a much different distribution than in IPhone and Web Apps.
 
 ![logo](images/15_likecount_top5sources.png)
 
 ### Text length distribution
 
-The following figure shows the text length distribution for the sentences present in this dataset.
+The following figure shows the text length distribution for the sentences present in this dataset, which seems to be some kind of a bimodal distribution.
 
 ![logo](images/16_distlengthtext.png)
 
 ### Text length distribution by source
 
-The next figure addresses the text length distribution discriminated by the top 5 sources,...
+The next figure addresses the text length distribution discriminated by the top 5 sources, from which one can notice that the overall distribution seems to be a sum of 5 similar distributions
 
 ![logo](images/17_distlengthtext_top5sources.png)
 
@@ -230,19 +239,20 @@ The next figure shows a boxen plot of the text length distribution of the senten
 
 ### Boxen plot of the text length by source
 
-The following figure shows a boxen plot of the text length discriminated by the source of Twitter posting.
+The following figure shows a boxen plot of the text length discriminated by the source of Twitter posting, from which one can clearly notice that...
+
 
 ![logo](images/19_textlen_boxen_source.png)
 
 ### Distribution of the number of words
 
-The next figure shows the number of words distribution in the whole dataset instances.
+The next figure shows the number of words distribution in the whole dataset instances, that seems to be made up of two independent distributions. Remarkably, there seems to be some spikes in the word's count distribution.
 
 ![logo](images/20_numberwords_dist.png)
 
 ### Unique words
 
-The following figure shows a distribution of the unique words for each instance present in this dataset in terms of the sources of Twitter posting.
+The following figure shows a distribution of the unique words for each instance present in this dataset in terms of the sources of Twitter posting. Interestingly, the shape of each source of Twitter posting seems to similar to the others. 
 
 ![logo](images/21_uniquewords_dist.png)
 
@@ -274,12 +284,14 @@ The following figure shows boxen plots of the top 5 sources of Twitter Posting f
 ### Descriptive statistics
 
 Descriptive statistics for the whole dataset is shown in the next figure.
+One can notice that there is a relatively large amount of tweets (50001) in all languages, and other attribute's statistics can be obtained from the table.
 
 ![logo](images/26_stats_all.png)
 
 ### Descriptive statistics for Twittes in English
 
 Descriptive statistics for Twittes in Portuguese for the whole dataset is shown in the next figure.
+One can notice that there is a large amount of tweets (32076) and other attribute's statistics can be obtained from the table.
 
 
 ![logo](images/27_stats_en.png)
@@ -287,44 +299,57 @@ Descriptive statistics for Twittes in Portuguese for the whole dataset is shown 
 ### Descriptive statistics for Twittes in Portuguese
 
 Descriptive statistics for Twittes in Portuguese for the whole dataset is shown in the next figure.
+One can notice that there is a small amount of tweets (1175) and other attribute's statistics can be obtained from the table.
 
 ![logo](images/28_stats_pt.png)
 
 ### Distribution of sentiments
 
-The next figure shows the sentiment distribution present in this dataset.
+The next figure shows the sentiment distribution present in this dataset, from which one can clearly notice that neutral sentiments (zero values) have a significant amount in this dataset, and there seems to be a right-skewed distribution towards positive sentiments.
 
 ![logo](images/29_sentiment_dist.png)
 
 ### Distribution of subjectivity
 
-It is shown in the next figure the distribution of subjectivity in this dataset instances.
+It is shown in the next figure the distribution of subjectivity in this dataset instances, from which one can observe that the *zero values for subjectivity* are predominant in this dataset.
 
 ![logo](images/30_subjectivity_dist.png)
 
 ### Objective vs Subjective
 
+In regards of objectivity against subjectivity of the sentences in this dataset, in general, as depicted in the next figure, there is a major contribution of *well-defined objective* sentences.
+
 ![logo](images/31_objective_subjective.png)
 
 ### Distribution of polarity
+
+The following figure shows the polarity distribution the sentiments in this dataset, from which one can notice that the positive sentiment is predominant, followed by neutral, and the negative sentiment is relatively small.
 
 ![logo](images/32_polarity_dist.png)
 
 ### Polarity vs subjectivity
 
-The following figure addresses the polarity of the sentences discriminated by its subjectivity.
+The following figure addresses the polarity of the sentences discriminated by its subjectivity, from which one can notice that the neutral sentiment is very objective, while negative and positive sentiments tend to be a bit more subjective than objective.
 
 ![logo](images/33_polarity_sub.png)
 
 ### Top 10 most common words
 
+The next figure shows the top 20 words obtained by analyzing this dataset. The top 3 most common words are: "chatgpt", "ai", and "it".
+
+
 ![logo](images/34_top10mostcommonwords.png)
 
 ### Top 20 bigrams
 
+The next figure shows the top 20 bigrams obtained by analyzing this dataset. The top 3 bigrams are: "chat gpt", "use chatgpt", and "using chatgpt".
+
+
 ![logo](images/35_top20bigrams.png)
 
 ### Top 20 trigrams
+The next figure shows the top 20 trigrams obtained by analyzing this dataset. The top 3 trigrams are: "chatgpt creator openai", "wharton mba exam", and "medical licensing exam".
+
 
 ![logo](images/36_top20trigrams.png)
 
